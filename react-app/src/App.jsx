@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import StatsBar from './components/StatsBar'
 import Gallery from './components/Gallery'
 import Services from './components/Services'
+import InfoSection from './components/InfoSection'
 import About from './components/About'
 import Reviews from './components/Reviews'
 import CTA from './components/CTA'
@@ -23,6 +24,7 @@ function App() {
         <StatsBar />
         <Gallery />
         <Services />
+        <InfoSection />
         <About />
         <Reviews />
         <CTA />

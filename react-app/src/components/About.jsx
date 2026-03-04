@@ -20,7 +20,7 @@ export default function About() {
         </div>
         <div className="w-full md:w-3/5">
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">La Artista</span>
-          <h2 className="text-3xl md:text-5xl font-black mb-6">Pasión por los detalles</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-6"><span className="font-script text-primary">Pasión</span> por los detalles</h2>
           <p className="text-slate-600 text-lg mb-8 leading-relaxed">
             Hola, soy Loli. Mi misión es elevar tu confianza a través de la belleza de tus manos. Cada uña es un lienzo único que merece dedicación y el más alto estándar de higiene y técnica.
           </p>
@@ -32,7 +32,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <a href="https://wa.me/5493513818087" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-primary font-bold text-lg hover:gap-4 transition-all">
+          <a href="https://wa.me/5493513818087?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%92%85" target="_blank" rel="noopener" className="inline-flex items-center gap-2 text-primary font-bold text-lg hover:gap-4 transition-all">
             Contactame para tu próximo turno
             <span className="material-symbols-outlined">arrow_forward</span>
           </a>

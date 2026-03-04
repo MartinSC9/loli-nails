@@ -1,18 +1,18 @@
 const services = [
-  { icon: 'shield', name: 'Kapping', price: '$3.500', desc: 'Fortalecimiento de uña natural con una capa protectora de gel o acrílico. Ideal para uñas largas y fuertes.', time: '45 min aprox.', featured: false },
-  { icon: 'diamond', name: 'Esculpidas', price: '$5.500', desc: 'Extensiones artesanales para longitud y forma perfecta. Personalizadas según tu mano.', time: '1h 30min aprox.', featured: false },
-  { icon: 'palette', name: 'Semipermanente', price: '$2.800', desc: 'Esmaltado de larga duración con limpieza profunda de cutículas. Brillo impecable 15+ días.', time: '40 min aprox.', featured: false },
-  { icon: 'auto_awesome', name: 'Nail Art', price: 'Desde $1.500', desc: 'Diseños exclusivos: mano alzada, pedrería, efectos mirror y minimalismo conceptual.', time: 'Según diseño', featured: true },
+  { icon: 'palette', name: 'Esmaltado Semipermanente', price: '$15.000', desc: 'Esmaltado en gel sobre uña natural. Productos aprobados por ANMAT.', time: '1h 10min aprox.', featured: false },
+  { icon: 'shield', name: 'Kapping Gel de Construcción', price: '$19.500', desc: 'Capa de gel sobre la uña natural, brinda mayor dureza a las uñas. Recomendable en uñas largas.', time: '2hs aprox.', featured: false },
+  { icon: 'diamond', name: 'Kapping Base Rubber', price: '$18.000', desc: 'Capa de rubber gel sobre la uña natural, brinda fortalecimiento. Recomendable en uñas cortas/medianas.', time: '2hs aprox.', featured: false },
+  { icon: 'auto_awesome', name: 'Soft Gel + Semi', price: '$32.000', desc: 'Tips adherido con base coat + esmaltado. Extensión perfecta con acabado natural.', time: '2hs aprox.', featured: true },
 ]
 
 export default function Services() {
   return (
     <section id="servicios" className="bg-white border-y border-primary/10">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Nuestros servicios</span>
-          <h2 className="text-3xl md:text-5xl font-black mb-4">Menú de Servicios</h2>
-          <p className="text-slate-500 max-w-xl mx-auto text-lg">Cada tratamiento es una experiencia personalizada de cuidado y arte para tus manos.</p>
+          <h2 className="text-3xl md:text-5xl font-black mb-4">Lista de <span className="font-script text-primary">Precios</span></h2>
+          <p className="text-slate-500 max-w-2xl mx-auto text-lg">Todos los servicios incluyen manicuria combinada con torno (pulido de cutículas perfecto) y utilización de productos de calidad aprobados por ANMAT.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map(s => s.featured ? (

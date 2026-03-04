@@ -46,7 +46,7 @@ export default function Filters({ activeColor, activeCategory, activeShape, onCo
           {categories.map(cat => (
             <button
               key={cat.value}
-              className={`px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
+              className={`px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-colors cursor-pointer ${
                 activeCategory === cat.value
                   ? 'bg-primary text-white'
                   : 'bg-primary/5 text-slate-600 hover:bg-primary/10'
@@ -62,7 +62,7 @@ export default function Filters({ activeColor, activeCategory, activeShape, onCo
         {shapes.map(s => (
           <button
             key={s.value}
-            className={`shape-tab pb-4 text-sm font-bold tracking-wide uppercase transition-colors ${
+            className={`shape-tab pb-4 text-sm font-bold tracking-wide uppercase transition-colors cursor-pointer ${
               activeShape === s.value
                 ? 'active'
                 : 'text-slate-400 hover:text-slate-600'

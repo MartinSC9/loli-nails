@@ -26,7 +26,7 @@ export default function Header({ onMenuToggle }) {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <a href="https://wa.me/5493513818087" target="_blank" rel="noopener" className="hidden sm:flex px-6 h-11 rounded-full bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 items-center gap-2">
+          <a href="https://wa.me/5493513818087?text=Hola!%20Quiero%20reservar%20un%20turno%20%F0%9F%92%85" target="_blank" rel="noopener" className="hidden sm:flex px-6 h-11 rounded-full bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 items-center gap-2">
             <span className="material-symbols-outlined text-lg">calendar_month</span>
             Reservar
           </a>

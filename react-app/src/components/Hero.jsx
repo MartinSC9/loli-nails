@@ -8,7 +8,7 @@ export default function Hero() {
             Turnos disponibles esta semana
           </span>
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 mb-6 leading-[1.1]">
-            Encontrá tu próximo <span className="text-primary">diseño</span>
+            Encontrá tu próximo <span className="font-script text-primary">diseño</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-lg font-medium mb-8">
             Catálogo premium de nail art para la estética moderna. Filtrá por tu estilo favorito y reservá tu turno.
