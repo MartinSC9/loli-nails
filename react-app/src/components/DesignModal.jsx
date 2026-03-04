@@ -35,9 +35,14 @@ export default function DesignModal({ design, onClose }) {
           <img className="w-full h-full object-cover block" src={design.image} alt={design.name} />
         </div>
         <div className="p-8">
-          <h3 className="text-2xl font-black text-slate-900 mb-2">{design.name}</h3>
-          <p className="text-slate-500 mb-4">{design.subtitle}</p>
-          <div className="flex items-center gap-2 mb-6">
+          <h3 className="text-2xl font-black text-slate-900 mb-1">{design.name}</h3>
+          <p className="text-primary font-bold text-lg mb-3">{design.price}</p>
+          <p className="text-slate-600 mb-4">{design.description}</p>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-1.5 text-sm text-slate-500">
+              <span className="material-symbols-outlined text-base">schedule</span>
+              {design.duration}
+            </div>
             <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold capitalize">{design.category}</span>
             <span className="text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full font-semibold capitalize">{design.shape}</span>
           </div>
@@ -48,7 +53,7 @@ export default function DesignModal({ design, onClose }) {
             className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="material-symbols-outlined text-2xl">chat</span>
-            Consultar por WhatsApp
+            Quiero este!
           </a>
         </div>
       </div>
