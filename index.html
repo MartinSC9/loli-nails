@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Loli Nails | Catálogo Digital</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8304c",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211113",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(33, 17, 19, 0.4);
+            border: 1px solid rgba(232, 48, 76, 0.1);
+        }
+        .hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+        html { scroll-behavior: smooth; }
+        .fill-1 { font-variation-settings: 'FILL' 1; }
+
+        /* Mobile menu */
+        .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+
+        /* Color filter active state */
+        .color-dot.active { box-shadow: 0 0 0 2px #fff, 0 0 0 4px #e8304c; }
+
+        /* Shape tab active */
+        .shape-tab.active { color: #e8304c; border-bottom: 2px solid #e8304c; }
+
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-card { animation: fadeInUp 0.5s ease forwards; opacity: 0; }
+        .animate-card:nth-child(1) { animation-delay: 0.05s; }
+        .animate-card:nth-child(2) { animation-delay: 0.1s; }
+        .animate-card:nth-child(3) { animation-delay: 0.15s; }
+        .animate-card:nth-child(4) { animation-delay: 0.2s; }
+        .animate-card:nth-child(5) { animation-delay: 0.25s; }
+        .animate-card:nth-child(6) { animation-delay: 0.3s; }
+        .animate-card:nth-child(7) { animation-delay: 0.35s; }
+        .animate-card:nth-child(8) { animation-delay: 0.4s; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px -15px rgba(232, 48, 76, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full glass-card border-b border-primary/10">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+                <div class="flex items-center gap-12">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="flex items-center justify-center size-10 rounded-lg bg-primary text-white">
+                            <span class="material-symbols-outlined text-2xl">flare</span>
+                        </div>
+                        <h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Loli <span class="text-primary">Nails</span></h1>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+                    </nav>
+                </div>
+                <div class="flex-1 max-w-md hidden lg:block">
+                    <div class="relative group">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">search</span>
+                        <input class="w-full h-11 pl-12 pr-4 rounded-xl border-none bg-primary/5 focus:ring-2 focus:ring-primary/20 placeholder:text-slate-400 dark:bg-primary/10" placeholder="Buscar diseños..." type="text" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/5493510000000" class="hidden sm:flex px-6 h-11 rounded-xl bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">calendar_month</span>
+                        Reservar
+                    </a>
+                    <button onclick="toggleMenu()" class="md:hidden p-2">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-[60]" onclick="toggleMenu()"></div>
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-white dark:bg-background-dark z-[70] p-8 flex flex-col gap-6 shadow-2xl">
+            <button onclick="toggleMenu()" class="self-end">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <a onclick="toggleMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
+            <a onclick="toggleMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+            <a onclick="toggleMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>
+            <a onclick="toggleMenu()" class="text-lg font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+            <a href="https://wa.me/5493510000000" class="mt-4 flex items-center justify-center gap-2 rounded-xl bg-primary text-white px-6 py-3 font-bold shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined text-lg">calendar_month</span>
+                Reservar Turno
+            </a>
+        </div>
+
+        <main class="flex-1">
+
+            <!-- Hero Banner -->
+            <section class="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background-light to-primary/10 dark:from-background-dark dark:via-background-dark dark:to-primary/5">
+                <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col lg:flex-row items-center gap-12">
+                    <div class="flex-1 max-w-2xl">
+                        <span class="inline-flex items-center gap-2 text-primary font-bold tracking-widest uppercase text-xs mb-4 bg-primary/10 px-4 py-2 rounded-full">
+                            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                            Turnos disponibles esta semana
+                        </span>
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-slate-100 mb-6 leading-[1.1]">
+                            Encontrá tu próximo <span class="text-primary">diseño</span>
+                        </h2>
+                        <p class="text-lg text-slate-500 dark:text-slate-400 max-w-lg font-medium mb-8">
+                            Catálogo premium de nail art para la estética moderna. Filtrá por tu estilo favorito y reservá tu turno.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#galeria" class="px-8 py-3.5 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                                <span class="material-symbols-outlined">palette</span>
+                                Ver Diseños
+                            </a>
+                            <a href="#servicios" class="px-8 py-3.5 rounded-xl border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">spa</span>
+                                Servicios
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 gap-4 max-w-md">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
+                                <img class="w-full h-full object-cover" alt="Diseño destacado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG" />
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
+                                <img class="w-full h-full object-cover" alt="Diseño destacado 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Bar -->
+            <section class="border-y border-primary/10 bg-white/50 dark:bg-background-dark/50">
+                <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-primary">+500</p>
+                        <p class="text-sm text-slate-500 font-medium mt-1">Diseños Realizados</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-primary">+3</p>
+                        <p class="text-sm text-slate-500 font-medium mt-1">Años de Experiencia</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-primary">5.0</p>
+                        <p class="text-sm text-slate-500 font-medium mt-1">Rating en Google</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-primary">100%</p>
+                        <p class="text-sm text-slate-500 font-medium mt-1">Productos Premium</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery / Catalog -->
+            <section id="galeria" class="max-w-7xl mx-auto w-full px-6 py-16 md:py-24">
+                <div class="flex flex-col gap-2 mb-10">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Portafolio</span>
+                    <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-slate-100">Galería de Diseños</h2>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl font-medium">Explorá nuestro catálogo y elegí tu favorito para tu próxima cita.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="flex flex-col gap-6 mb-10">
+                    <div class="flex flex-wrap items-center gap-6 p-1">
+                        <div class="flex items-center gap-3 pr-6 border-r border-primary/10">
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Colores</span>
+                            <div class="flex gap-3">
+                                <label class="color-dot size-8 rounded-full cursor-pointer transition-all hover:scale-110 active" style="background-color: #f3e5d8;"><input class="hidden" name="color" type="radio" checked /></label>
+                                <label class="color-dot size-8 rounded-full cursor-pointer transition-all hover:scale-110" style="background-color: #e8304c;"><input class="hidden" name="color" type="radio" /></label>
+                                <label class="color-dot size-8 rounded-full cursor-pointer transition-all hover:scale-110 ring-1 ring-slate-200" style="background-color: #ffffff;"><input class="hidden" name="color" type="radio" /></label>
+                                <label class="color-dot size-8 rounded-full cursor-pointer transition-all hover:scale-110" style="background-color: #4ade80;"><input class="hidden" name="color" type="radio" /></label>
+                                <label class="color-dot size-8 rounded-full cursor-pointer transition-all hover:scale-110" style="background-color: #1a1a1a;"><input class="hidden" name="color" type="radio" /></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-2">
+                            <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap">Todos</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">Nudes</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">Rojos</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">French</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">Glazed</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">Neon</button>
+                            <button class="px-5 py-2 rounded-full bg-primary/5 text-slate-600 dark:text-slate-300 text-sm font-bold hover:bg-primary/10 whitespace-nowrap transition-colors">Dark</button>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 border-b border-primary/10">
+                        <button class="shape-tab active pb-4 text-sm font-bold tracking-wide uppercase transition-colors">Almendra</button>
+                        <button class="shape-tab pb-4 text-sm font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 tracking-wide uppercase transition-colors">Coffin</button>
+                        <button class="shape-tab pb-4 text-sm font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 tracking-wide uppercase transition-colors">Cuadrada</button>
+                        <button class="shape-tab pb-4 text-sm font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 tracking-wide uppercase transition-colors">Stiletto</button>
+                    </div>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Golden Nude - Minimalist almond nails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Golden Nude</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Almendra</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Minimalista & Elegante</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Classic Red Velvet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Classic Red Velvet</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Coffin</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Brillo Intenso</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Pearl Glaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfMtEFzWYq8fayr1BB4AYjqXYjJxwHZAB-ZBqyimCii_IaNOpEk4xghIzAalWX2L6eX0DCb2qBPul6VN1frG6IwSWckCiZ8rfjmf7OOSaEefrza-nInl8LqeM9x9pF9BphrHoFpkQGpV_ShM56dBSnvtqbyKJjV8mZ_BjyD5Cfa1HCvkoAhQ1JQX3HSjtiU1s1ohMOUdVNzyo8Hm3tCvqpxzGJwXkc02TTULjV8cVHim9Mrk0w9ehEQNiLoGOkYVCW1xPfXifG" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Pearl Glaze</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Cuadrada</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Chrome Iridiscente</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Neon Tip French" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0AI8v1xW0EL0d1uK0KaZ2T1Y9EN__CA2ib9JuGgWtkOT27FffF_ORhJ7yo_K1Z13iiHm5tvhm67AZErFLXLtOWygWNJrXDFs-mj6AUF8sQWOdqjYw6v2zKkVyLyDYieE3OghQhdOd3deo1QVC4EM5TZOr_PP9iazsn6U2T7zMoKVQPnBozHoIe-rnd4O2DGz_ko-1tPCF6uERlGl_tQ90nuRl-6QbWJXp3zMF70r7OGe8Qszp7j_v0Oc3H93t94lUDgO83I8Z" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Neon Tip French</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Almendra</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Twist Moderno</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Midnight Matte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLYAc3c0jx8V5csDh8yOyoHqaZh_sIF0zbVzs1Kfu_0BbvMeZvgEGfAnZeV76VVWADgFsgHkpYq82f6i9zzWvJsDxF-QS-YF2p4M9Z_gyagQ7mqurF2k2EFQBi4SdvOusQeVhKzcvedxD5XhjdhYBQ1bA8EY8dvwV2igk4C_LtzPILANrh-c2ycpCqPLRV4vBsdoLvFG-UwxQt6EeYdKjv4ZbdWiEk8HZ-CewhcuTSKTA8VeGCIs7E85ervIxknaUgkhCTQQng" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Midnight Matte</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Cuadrada</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Oscuro & Sofisticado</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Pastel Marble" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtkWGJ1IUMrQnMjbHkqwL1gyEeEXs43kbHDp_dR3XuUjKo3fhJVyG8QLcfIcGwOM4LSrr6JyccX-q_ZnasM4T_DWRWKcRWZS2vTXMzQTfvB1xkCwf8jg8KEB5s-TCFY0DxidCZYv-Myxs87B86KvIEAGW_kSaZgF4hpVOBtwyWRkjWDGQbl57BqUHz3EScA2aIkx_ytpnX3Ar2sE_4EHZIKBtWTJOjGflT2d2xbUaOBcDm2nBCjTvqNvg3XwmAuBMPkZzNVT9f" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Pastel Marble</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Coffin</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Remolinos Artísticos</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Bare & Bold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGuglxrF34SRJSymWdPLf6SCYoGxttwvYIqCu-UBv2A3ieK0qFVYeaoP9S_SkqGtD1WGIHPYlVuvxzJOMlYMmcMUdwXzgd2d6OGsMXDHYYXbPUVPYvhqB2Z9tfmOAm1LteDZrPd2mKAOz9m9e-87Pp_Bgsfdl_HFjWnQx43KjyU4eDoxjSK-ooen2VH55VmioZthZmF60MI-grlrgXp25SvseTZT7yvCWwUpRj4y78KIBBiFtD3U-c_yVopXYWaa-8gOLsMyfx" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Bare & Bold</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Almendra</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Ultra Natural</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="animate-card group relative flex flex-col glass-card rounded-xl overflow-hidden hover-zoom transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700" alt="Crimson Sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV0QtcPnKD9z6Ilv3LE8GfAGYYMTOl8SS0UrDtwo3z8YNm8v-HbqK9EQJGBAlcNye7zKUBmxk3eNYT2a66Y7_ixRbGaDspTnSUNUdkb3pk2__hHFHeZNT6ntlw1BqWfcK-nyfdqNnKypyEqbQ8szbsXrhM12gDJL_VExHyUGOKSevBK3MIfL8gjmHrkrL-MDBjQDtwtGNHRv3no_-mEKr7usmWtAUeIHLZ7nF0nKscQ-BKLdExwidL56bu3sOr3IY_EPi9AX5H" />
+                        </div>
+                        <div class="p-5 flex flex-col gap-1">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Crimson Sky</h3>
+                                <span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded">Coffin</span>
+                            </div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Colección Invierno</p>
+                        </div>
+                        <button class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full glass-card text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex justify-center">
+                    <button class="px-8 py-3 rounded-xl border border-primary/20 text-slate-900 dark:text-slate-100 font-bold hover:bg-primary hover:text-white transition-all flex items-center gap-2">
+                        <span class="material-symbols-outlined">expand_more</span>
+                        Cargar Más Diseños
+                    </button>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="servicios" class="bg-white dark:bg-background-dark/50 border-y border-primary/10">
+                <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+                    <div class="text-center mb-16">
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Nuestros servicios</span>
+                        <h2 class="text-3xl md:text-5xl font-black dark:text-white mb-4">Menú de Servicios</h2>
+                        <p class="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-lg">Cada tratamiento es una experiencia personalizada de cuidado y arte para tus manos.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="service-card glass-card rounded-2xl p-7">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary text-2xl fill-1">shield</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-1">Kapping</h3>
+                            <p class="text-2xl font-extrabold text-primary mb-3">$3.500</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5">Fortalecimiento de uña natural con una capa protectora de gel o acrílico. Ideal para uñas largas y fuertes.</p>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <span class="material-symbols-outlined text-sm">schedule</span>
+                                45 min aprox.
+                            </div>
+                        </div>
+                        <div class="service-card glass-card rounded-2xl p-7">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary text-2xl fill-1">diamond</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-1">Esculpidas</h3>
+                            <p class="text-2xl font-extrabold text-primary mb-3">$5.500</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5">Extensiones artesanales para longitud y forma perfecta. Personalizadas según tu mano.</p>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <span class="material-symbols-outlined text-sm">schedule</span>
+                                1h 30min aprox.
+                            </div>
+                        </div>
+                        <div class="service-card glass-card rounded-2xl p-7">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                                <span class="material-symbols-outlined text-primary text-2xl fill-1">palette</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-1">Semipermanente</h3>
+                            <p class="text-2xl font-extrabold text-primary mb-3">$2.800</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5">Esmaltado de larga duración con limpieza profunda de cutículas. Brillo impecable 15+ días.</p>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <span class="material-symbols-outlined text-sm">schedule</span>
+                                40 min aprox.
+                            </div>
+                        </div>
+                        <div class="service-card rounded-2xl p-7 bg-primary text-white relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                            <div class="relative z-10">
+                                <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-5">
+                                    <span class="material-symbols-outlined text-white text-2xl fill-1">auto_awesome</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-1">Nail Art</h3>
+                                <p class="text-2xl font-extrabold mb-3">Desde $1.500</p>
+                                <p class="text-white/80 text-sm leading-relaxed mb-5">Diseños exclusivos: mano alzada, pedrería, efectos mirror y minimalismo conceptual.</p>
+                                <div class="flex items-center gap-2 text-xs text-white/60">
+                                    <span class="material-symbols-outlined text-sm">schedule</span>
+                                    Según diseño
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="sobre-mi" class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-2/5 relative">
+                        <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                            <img class="w-full h-full object-cover" alt="Loli - Artista de Uñas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT" />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="bg-primary text-white p-2.5 rounded-xl">
+                                <span class="material-symbols-outlined">verified</span>
+                            </div>
+                            <div>
+                                <p class="font-extrabold text-slate-900 dark:text-white text-lg">+3 Años</p>
+                                <p class="text-xs text-slate-500">Experiencia Certificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5">
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">La Artista</span>
+                        <h2 class="text-3xl md:text-5xl font-black dark:text-white mb-6">Pasión por los detalles</h2>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
+                            Hola, soy Loli. Mi misión es elevar tu confianza a través de la belleza de tus manos. Cada uña es un lienzo único que merece dedicación y el más alto estándar de higiene y técnica.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mb-10">
+                            <div class="flex items-center gap-3 bg-primary/5 p-3 rounded-xl">
+                                <span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+                                <span class="font-semibold text-sm dark:text-white">Higiene Clínica</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-primary/5 p-3 rounded-xl">
+                                <span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+                                <span class="font-semibold text-sm dark:text-white">Marcas Premium</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-primary/5 p-3 rounded-xl">
+                                <span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+                                <span class="font-semibold text-sm dark:text-white">Atención Personal</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-primary/5 p-3 rounded-xl">
+                                <span class="material-symbols-outlined text-primary fill-1">check_circle</span>
+                                <span class="font-semibold text-sm dark:text-white">Diseños Exclusivos</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5493510000000" class="inline-flex items-center gap-2 text-primary font-bold text-lg hover:gap-4 transition-all">
+                            Contactame para tu próximo turno
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews -->
+            <section class="bg-gradient-to-b from-primary/5 to-background-light dark:from-primary/5 dark:to-background-dark border-t border-primary/10">
+                <div class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+                    <div class="text-center mb-16">
+                        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Testimonios</span>
+                        <h2 class="text-3xl md:text-4xl font-black dark:text-white">Lo que dicen nuestras clientas</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                            <div class="absolute -top-3 -left-3 text-primary/10">
+                                <span class="material-symbols-outlined text-[60px]">format_quote</span>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex gap-0.5 text-primary mb-4">
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                </div>
+                                <p class="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">"Loli es una artista. Mis uñas nunca se vieron tan naturales y elegantes. El detalle en el Nail Art es impecable."</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">MS</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Martina Suárez</p>
+                                        <p class="text-xs text-slate-500">Cliente desde 2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                            <div class="absolute -top-3 -left-3 text-primary/10">
+                                <span class="material-symbols-outlined text-[60px]">format_quote</span>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex gap-0.5 text-primary mb-4">
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                </div>
+                                <p class="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">"La técnica de Kapping cambió mi vida, mis uñas ya no se quiebran. El ambiente del estudio es súper relax."</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">VC</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Valentina Costa</p>
+                                        <p class="text-xs text-slate-500">Cliente frecuente</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+                            <div class="absolute -top-3 -left-3 text-primary/10">
+                                <span class="material-symbols-outlined text-[60px]">format_quote</span>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex gap-0.5 text-primary mb-4">
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                    <span class="material-symbols-outlined text-sm fill-1">star</span>
+                                </div>
+                                <p class="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">"Siempre me sorprende con diseños nuevos. Es la única persona a la que le confío mis uñas hace 3 años."</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">LR</div>
+                                    <div>
+                                        <p class="font-bold text-sm">Lucía Ramírez</p>
+                                        <p class="text-xs text-slate-500">Cliente desde 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="bg-primary relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-8 left-12 w-32 h-32 border border-white rounded-full"></div>
+                    <div class="absolute bottom-8 right-16 w-48 h-48 border border-white rounded-full"></div>
+                </div>
+                <div class="relative z-10 max-w-3xl mx-auto px-6 py-16 md:py-20 text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4">¿Lista para tu próximo diseño?</h2>
+                    <p class="text-white/80 text-lg mb-8">Reservá tu turno por WhatsApp y elegí el diseño que más te represente.</p>
+                    <a href="https://wa.me/5493510000000" class="inline-flex items-center gap-3 bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
+                        <span class="material-symbols-outlined text-2xl">chat</span>
+                        Reservar por WhatsApp
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contacto" class="mt-auto py-12 border-t border-primary/10 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="flex items-center justify-center size-8 rounded bg-primary text-white">
+                            <span class="material-symbols-outlined text-xl">flare</span>
+                        </div>
+                        <h2 class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Loli <span class="text-primary">Nails</span></h2>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-sm mb-6">Elevando el estándar del cuidado de uñas con arte y sofisticación en cada detalle.</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full glass-card flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </a>
+                        <a class="size-10 rounded-full glass-card flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a class="size-10 rounded-full glass-card flex items-center justify-center text-primary hover:scale-110 transition-transform" href="#">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-slate-900 dark:text-slate-100">Links Rápidos</h3>
+                    <ul class="flex flex-col gap-3 text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="#galeria">Catálogo Digital</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#servicios">Servicios & Precios</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Cuidados Post-Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-6 text-slate-900 dark:text-slate-100">Contacto</h3>
+                    <ul class="flex flex-col gap-3 text-slate-500 dark:text-slate-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">location_on</span> Buenos Aires, Argentina</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">mail</span> hola@lolinails.com</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">schedule</span> Mar - Sáb: 10:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-primary/5 text-center text-slate-400 text-sm">
+                &copy; 2025 Loli Nails. Todos los derechos reservados.
+            </div>
+        </footer>
+
+        <!-- WhatsApp FAB -->
+        <a class="fixed bottom-8 right-8 z-[100] group" href="https://wa.me/5493510000000" target="_blank" rel="noopener">
+            <div class="flex items-center gap-3">
+                <span class="hidden group-hover:block bg-white dark:bg-slate-800 shadow-xl px-4 py-2 rounded-full text-sm font-bold text-primary">¿Hablamos por WhatsApp?</span>
+                <div class="w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 active:scale-95">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('open');
+            document.getElementById('mobile-overlay').classList.toggle('open');
+        }
+
+        // Color dot selection
+        document.querySelectorAll('.color-dot').forEach(dot => {
+            dot.addEventListener('click', () => {
+                document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+            });
+        });
+
+        // Shape tab selection
+        document.querySelectorAll('.shape-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.shape-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.style.borderBottom = '';
+                    t.style.color = '';
+                });
+                tab.classList.add('active');
+            });
+        });
+
+        // Header shadow on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('shadow-lg', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
