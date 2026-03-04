@@ -16,6 +16,10 @@ export default function DesignCard({ design, onClick }) {
             <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold capitalize">{design.category}</span>
             <span className="text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full font-semibold capitalize">{design.shape}</span>
           </div>
+          <button className="mt-4 w-full flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold py-2.5 rounded-full hover:bg-primary/90 transition-colors">
+            <span className="material-symbols-outlined text-base">visibility</span>
+            Ver diseño
+          </button>
         </div>
       </div>
     </div>
