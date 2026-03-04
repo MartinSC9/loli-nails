@@ -1,5 +1,5 @@
 const colors = [
-  { value: 'all', style: { background: 'conic-gradient(#f3e5d8 0% 20%, #e8304c 20% 40%, #fff 40% 60%, #4ade80 60% 80%, #1a1a1a 80% 100%)' }, ring: true },
+  { value: 'all', style: { background: 'conic-gradient(#f3e5d8 0% 20%, #E91E90 20% 40%, #fff 40% 60%, #4ade80 60% 80%, #1a1a1a 80% 100%)' }, ring: true },
   { value: 'nude', style: { backgroundColor: '#f3e5d8' } },
   { value: 'red', style: { backgroundColor: '#e8304c' } },
   { value: 'white', style: { backgroundColor: '#ffffff' }, ring: true },

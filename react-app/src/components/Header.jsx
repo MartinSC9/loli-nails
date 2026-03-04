@@ -13,11 +13,10 @@ export default function Header({ onMenuToggle }) {
     <header className={`sticky top-0 z-50 w-full glass-card border-b border-primary/10 ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
         <div className="flex items-center gap-12">
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex items-center justify-center size-10 rounded-lg bg-primary text-white">
-              <span className="material-symbols-outlined text-2xl">flare</span>
+          <a href="#" className="flex items-center">
+            <div className="size-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+              <img src="/src/assets/logo.png" alt="Loli Nails" className="size-[60px] object-contain" />
             </div>
-            <h1 className="text-xl font-extrabold tracking-tight text-slate-900">Loli <span className="text-primary">Nails</span></h1>
           </a>
           <nav className="hidden md:flex items-center gap-8">
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>

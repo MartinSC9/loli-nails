@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #e8304c;
+  --color-primary: #E91E90;
   --color-background-light: #f8f6f6;
   --color-background-dark: #211113;
   --font-display: "Plus Jakarta Sans", sans-serif;
@@ -27,12 +27,12 @@ html {
 }
 
 .color-dot.active {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #e8304c;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #E91E90;
 }
 
 .shape-tab.active {
-  color: #e8304c;
-  border-bottom: 2px solid #e8304c;
+  color: #E91E90;
+  border-bottom: 2px solid #E91E90;
 }
 
 @keyframes fadeInUp {
@@ -72,7 +72,7 @@ html {
 }
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px -15px rgba(232, 48, 76, 0.15);
+  box-shadow: 0 20px 60px -15px rgba(233, 30, 144, 0.15);
 }
 
 .mobile-menu {
