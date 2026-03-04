@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 export default function Footer() {
   return (
     <footer id="contacto" className="mt-auto py-12 border-t border-primary/10 bg-background-light">
@@ -5,7 +7,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center mb-6">
             <div className="size-14 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
-              <img src="/src/assets/logo.png" alt="Loli Nails" className="size-[52px] object-contain" />
+              <img src={logo} alt="Loli Nails" className="size-[52px] object-contain" />
             </div>
           </div>
           <p className="text-slate-500 max-w-sm mb-6">Elevando el estándar del cuidado de uñas con arte y sofisticación en cada detalle.</p>

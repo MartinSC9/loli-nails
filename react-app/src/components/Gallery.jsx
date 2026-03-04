@@ -12,7 +12,7 @@ export default function Gallery() {
   const [showAll, setShowAll] = useState(false)
 
   useEffect(() => {
-    const hash = window.location.hash
+    const hash = decodeURIComponent(window.location.hash)
     if (hash.startsWith('#diseño/')) {
       const id = hash.replace('#diseño/', '')
       const found = designs.find(d => d.id === id)

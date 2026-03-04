@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../assets/logo.png'
 
 export default function Header({ onMenuToggle }) {
   const [scrolled, setScrolled] = useState(false)
@@ -15,7 +16,7 @@ export default function Header({ onMenuToggle }) {
         <div className="flex items-center gap-12">
           <a href="#" className="flex items-center">
             <div className="size-16 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
-              <img src="/src/assets/logo.png" alt="Loli Nails" className="size-[60px] object-contain" />
+              <img src={logo} alt="Loli Nails" className="size-[60px] object-contain" />
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-8">
