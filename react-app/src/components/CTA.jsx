@@ -8,7 +8,7 @@ export default function CTA() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 py-16 md:py-20 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-black mb-4">¿Lista para tu próximo <span className="font-script">diseño</span>?</h2>
         <p className="text-white/80 text-lg mb-8">Reservá tu turno por WhatsApp y elegí el diseño que más te represente.</p>
-        <a href="https://wa.me/5493513818087?text=Hola!%20Quiero%20reservar%20un%20turno%20%F0%9F%92%85" target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
+        <a href="https://wa.me/5493513818087?text=Hola!%20Te%20hablo%20desde%20la%20p%C3%A1gina%20de%20Loli%20Nails%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener" className="inline-flex items-center gap-3 bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
           <span className="material-symbols-outlined text-2xl">chat</span>
           Reservar por WhatsApp
         </a>

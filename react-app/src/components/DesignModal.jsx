@@ -14,7 +14,7 @@ export default function DesignModal({ design, onClose }) {
   if (!design) return null
 
   const designUrl = `${window.location.origin}/#diseño/${design.id}`
-  const waMessage = encodeURIComponent(`Hola! Me interesa el diseño *${design.name}* 👋\n${designUrl}`)
+  const waMessage = encodeURIComponent(`Hola! Te hablo desde la página de Loli Nails. Me interesa el diseño *${design.name}*\n${designUrl}`)
   const waUrl = `https://wa.me/5493513818087?text=${waMessage}`
 
   return (
