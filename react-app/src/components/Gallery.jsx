@@ -46,6 +46,7 @@ export default function Gallery() {
       <div className="text-center mt-10">
         <Link
           to="/galeria"
+          onClick={() => sessionStorage.setItem('gallery-scroll', String(window.scrollY))}
           className="px-8 py-3.5 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all inline-flex items-center gap-2"
         >
           <span className="material-symbols-outlined text-primary">grid_view</span>

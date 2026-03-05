@@ -38,7 +38,13 @@ function ScrollToHash() {
         if (el) el.scrollIntoView({ behavior: 'smooth' })
       }, 100)
     } else {
-      window.scrollTo(0, 0)
+      const savedScroll = sessionStorage.getItem('gallery-scroll')
+      if (pathname === '/' && savedScroll) {
+        sessionStorage.removeItem('gallery-scroll')
+        setTimeout(() => window.scrollTo(0, parseInt(savedScroll)), 50)
+      } else {
+        window.scrollTo(0, 0)
+      }
     }
   }, [hash, pathname])
   return null
