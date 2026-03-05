@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const colors = [
   { value: 'all', label: 'Todos', style: { background: 'conic-gradient(#f472b6 0% 15%, #e8304c 15% 30%, #fff 30% 45%, #1a1a1a 45% 55%, #3b82f6 55% 65%, #f97316 65% 75%, #a78bfa 75% 85%, #facc15 85% 100%)' }, ring: true },
@@ -16,23 +16,34 @@ const colors = [
 
 export default function Filters({ activeColor, onColorChange, backLink }) {
   const scrollRef = useRef(null)
+  const [showFade, setShowFade] = useState(true)
 
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
     const timer = setTimeout(() => {
-      el.scrollTo({ left: 60, behavior: 'smooth' })
-      setTimeout(() => el.scrollTo({ left: 0, behavior: 'smooth' }), 400)
-    }, 500)
+      el.scrollTo({ left: 80, behavior: 'smooth' })
+      setTimeout(() => el.scrollTo({ left: 0, behavior: 'smooth' }), 500)
+    }, 600)
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const handleScroll = () => {
+      setShowFade(el.scrollLeft < el.scrollWidth - el.clientWidth - 10)
+    }
+    el.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => el.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div className="flex flex-col gap-1">
+    <div className="relative">
       <div
         ref={scrollRef}
-        className="flex items-center gap-2 p-1 overflow-x-auto no-scrollbar"
-        style={{ WebkitOverflowScrolling: 'touch' }}
+        className="flex items-center gap-2 p-1 overflow-x-auto no-scrollbar touch-pan-x"
       >
         {backLink && (
           <a
@@ -66,6 +77,9 @@ export default function Filters({ activeColor, onColorChange, backLink }) {
           </button>
         ))}
       </div>
+      {showFade && (
+        <div className="absolute right-0 top-0 bottom-0 w-10 pointer-events-none bg-gradient-to-l from-white/90 to-transparent" />
+      )}
     </div>
   )
 }

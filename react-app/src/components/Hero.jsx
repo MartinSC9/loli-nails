@@ -1,3 +1,6 @@
+import heroCreative from '../assets/creative/36.jpeg'
+import heroSubtle from '../assets/subtle/21.jpeg'
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background-light to-primary/10">
@@ -27,12 +30,12 @@ export default function Hero() {
         <div className="flex-1 grid grid-cols-2 gap-4 max-w-md">
           <div className="space-y-4">
             <div className="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
-              <img className="w-full h-full object-cover" alt="Diseño destacado" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG" />
+              <img className="w-full h-full object-cover" alt="Diseño creativo" src={heroSubtle} />
             </div>
           </div>
           <div className="space-y-4 pt-8">
             <div className="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
-              <img className="w-full h-full object-cover" alt="Diseño destacado 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f" />
+              <img className="w-full h-full object-cover" alt="Diseño creativo" src={heroCreative} />
             </div>
           </div>
         </div>

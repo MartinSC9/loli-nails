@@ -43,7 +43,7 @@ export default function GalleryGrid() {
           </h1>
         </div>
       </div>
-      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md -mx-4 px-4 py-2 h-[60px] flex items-start">
+      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md -mx-4 px-4 py-2 min-h-[52px]">
         <Filters activeColor={activeColor} onColorChange={setActiveColor} backLink={scrolled} />
       </div>
 
