@@ -8,7 +8,7 @@ const services = [
 export default function Services() {
   return (
     <section id="servicios" className="bg-white border-y border-primary/10">
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         <div className="text-center mb-6">
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Nuestros servicios</span>
           <h2 className="text-3xl md:text-5xl font-black mb-4">Lista de <span className="font-script text-primary">Precios</span></h2>

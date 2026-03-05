@@ -23,8 +23,8 @@ export default function Footer() {
           <ul className="flex flex-col gap-3 text-slate-500">
             <li><Link className="hover:text-primary transition-colors" to="/#galeria">Catálogo Digital</Link></li>
             <li><Link className="hover:text-primary transition-colors" to="/#servicios">Servicios & Precios</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/#info-importante">Info Importante</Link></li>
             <li><Link className="hover:text-primary transition-colors" to="/#sobre-mi">Sobre Mí</Link></li>
-            <li><Link className="hover:text-primary transition-colors" to="/#contacto">Contacto</Link></li>
           </ul>
         </div>
       </div>

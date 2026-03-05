@@ -4,7 +4,7 @@ const features = ['Higiene Clínica', 'Marcas Premium', 'Atención Personal', 'D
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+    <section id="sobre-mi" className="max-w-7xl mx-auto px-6 py-12 md:py-16">
       <div className="flex flex-col md:flex-row items-center gap-16">
         <div className="w-full md:w-2/5 relative">
           <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">

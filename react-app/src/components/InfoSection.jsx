@@ -40,7 +40,7 @@ function Item({ icon, type, text }) {
 
 export default function InfoSection() {
   return (
-    <section id="info" className="max-w-7xl mx-auto px-6 py-16">
+    <section id="info-importante" className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-10">
         <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Importante</span>
         <h2 className="text-3xl md:text-5xl font-black"><span className="font-script text-primary">Info</span> que necesitás saber</h2>

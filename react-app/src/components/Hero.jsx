@@ -1,5 +1,5 @@
-import heroCreative from '../assets/creative/36.jpeg'
-import heroSubtle from '../assets/subtle/21.jpeg'
+import heroVideo1 from '../assets/video/1.mp4'
+import heroVideo2 from '../assets/video/2.mp4'
 
 export default function Hero() {
   return (
@@ -30,12 +30,12 @@ export default function Hero() {
         <div className="flex-1 grid grid-cols-2 gap-4 max-w-md">
           <div className="space-y-4">
             <div className="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
-              <img className="w-full h-full object-cover" alt="Diseño creativo" src={heroSubtle} />
+              <video className="w-full h-full object-cover" src={heroVideo1} autoPlay loop muted playsInline />
             </div>
           </div>
           <div className="space-y-4 pt-8">
             <div className="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
-              <img className="w-full h-full object-cover" alt="Diseño creativo" src={heroCreative} />
+              <video className="w-full h-full object-cover" src={heroVideo2} autoPlay loop muted playsInline />
             </div>
           </div>
         </div>

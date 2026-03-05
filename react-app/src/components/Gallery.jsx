@@ -29,7 +29,7 @@ export default function Gallery() {
   const visible = designs.slice(0, 4)
 
   return (
-    <section id="galeria" className="max-w-7xl mx-auto w-full px-6 py-16 md:py-24">
+    <section id="galeria" className="max-w-7xl mx-auto w-full px-6 py-12 md:py-16">
       <div className="flex flex-col gap-2 mb-10">
         <span className="text-primary font-bold tracking-widest uppercase text-xs">Portafolio</span>
         <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900">Galería de Diseños</h2>

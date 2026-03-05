@@ -23,6 +23,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 3.5rem;
+}
+
 .fill-1 {
   font-variation-settings: "FILL" 1;
 }

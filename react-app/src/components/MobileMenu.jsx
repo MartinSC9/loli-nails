@@ -8,8 +8,8 @@ export default function MobileMenu({ open, onClose }) {
         </button>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+        <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#info-importante">Info</a>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>
-        <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
         <a href="https://wa.me/5493513818087?text=Hola!%20Te%20hablo%20desde%20la%20p%C3%A1gina%20de%20Loli%20Nails%20Quiero%20reservar%20un%20turno" target="_blank" rel="noopener" className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary text-white px-6 py-3 font-bold shadow-lg shadow-primary/20">
           <span className="material-symbols-outlined text-lg">calendar_month</span>
           Reservar Turno

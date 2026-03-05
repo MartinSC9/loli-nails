@@ -22,8 +22,8 @@ export default function Header({ onMenuToggle }) {
           <nav className="hidden md:flex items-center gap-8">
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#info-importante">Info</a>
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>
-            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
           </nav>
         </div>
         <div className="flex items-center gap-4">

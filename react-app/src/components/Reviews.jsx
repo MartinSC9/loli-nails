@@ -7,7 +7,7 @@ const reviews = [
 export default function Reviews() {
   return (
     <section className="bg-gradient-to-b from-primary/5 to-background-light border-t border-primary/10">
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Testimonios</span>
           <h2 className="text-3xl md:text-4xl font-black">Lo que dicen nuestras clientas</h2>
