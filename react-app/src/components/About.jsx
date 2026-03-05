@@ -1,3 +1,5 @@
+import meImg from '../assets/me.png'
+
 const features = ['Higiene Clínica', 'Marcas Premium', 'Atención Personal', 'Diseños Exclusivos']
 
 export default function About() {
@@ -6,7 +8,7 @@ export default function About() {
       <div className="flex flex-col md:flex-row items-center gap-16">
         <div className="w-full md:w-2/5 relative">
           <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-            <img className="w-full h-full object-cover" alt="Loli - Artista de Uñas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT" />
+            <img className="w-full h-full object-cover" alt="Loli - Artista de Uñas" src={meImg} />
           </div>
           <div className="absolute -bottom-4 -right-4 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3">
             <div className="bg-primary text-white p-2.5 rounded-xl">
