@@ -1,11 +1,11 @@
 const colors = [
   { value: 'all', label: 'Todos', style: { background: 'conic-gradient(#f472b6 0% 15%, #e8304c 15% 30%, #fff 30% 45%, #1a1a1a 45% 55%, #3b82f6 55% 65%, #f97316 65% 75%, #a78bfa 75% 85%, #facc15 85% 100%)' }, ring: true },
+  { value: 'creative', label: 'Creativo', style: { background: 'linear-gradient(135deg, #f472b6, #a78bfa, #3b82f6)' } },
+  { value: 'subtle', label: 'Nude', style: { backgroundColor: '#f3e5d8' } },
   { value: 'pink', label: 'Rosa', style: { backgroundColor: '#f472b6' } },
   { value: 'red', label: 'Rojo', style: { backgroundColor: '#e8304c' } },
   { value: 'white', label: 'Blanco', style: { backgroundColor: '#ffffff' }, ring: true },
   { value: 'black', label: 'Negro', style: { backgroundColor: '#1a1a1a' } },
-  { value: 'subtle', label: 'Nude', style: { backgroundColor: '#f3e5d8' } },
-  { value: 'creative', label: 'Creativo', style: { background: 'linear-gradient(135deg, #f472b6, #a78bfa, #3b82f6)' } },
   { value: 'blue', label: 'Azul', style: { backgroundColor: '#3b82f6' } },
   { value: 'orange', label: 'Naranja', style: { backgroundColor: '#f97316' } },
   { value: 'violet', label: 'Violeta', style: { backgroundColor: '#a78bfa' } },
