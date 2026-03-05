@@ -36,15 +36,12 @@ export default function DesignModal({ design, onClose }) {
         </div>
         <div className="p-8">
           <h3 className="text-2xl font-black text-slate-900 mb-1">{design.name}</h3>
-          <p className="text-primary font-bold text-lg mb-3">{design.price}</p>
+          <p className="text-sm text-slate-500 mb-2">{design.subtitle}</p>
+          <p className="text-primary font-bold text-xl mb-3">{design.price}</p>
           <p className="text-slate-600 mb-4">{design.description}</p>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-1.5 text-sm text-slate-500">
-              <span className="material-symbols-outlined text-base">schedule</span>
-              {design.duration}
-            </div>
-            <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold capitalize">{design.category}</span>
-            <span className="text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full font-semibold capitalize">{design.shape}</span>
+          <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-6">
+            <span className="material-symbols-outlined text-base">schedule</span>
+            {design.duration}
           </div>
           <a
             href={waUrl}

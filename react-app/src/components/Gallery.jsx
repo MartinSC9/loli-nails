@@ -6,8 +6,6 @@ import DesignModal from './DesignModal'
 
 export default function Gallery() {
   const [activeColor, setActiveColor] = useState('all')
-  const [activeCategory, setActiveCategory] = useState('all')
-  const [activeShape, setActiveShape] = useState('all')
   const [selectedDesign, setSelectedDesign] = useState(null)
   const [showAll, setShowAll] = useState(false)
 
@@ -31,9 +29,7 @@ export default function Gallery() {
   }
 
   const filtered = designs.filter(d =>
-    (activeColor === 'all' || d.color === activeColor) &&
-    (activeCategory === 'all' || d.category === activeCategory) &&
-    (activeShape === 'all' || d.shape === activeShape)
+    activeColor === 'all' || d.color === activeColor
   )
 
   const visible = showAll ? filtered : filtered.slice(0, 8)
@@ -48,16 +44,12 @@ export default function Gallery() {
 
       <Filters
         activeColor={activeColor}
-        activeCategory={activeCategory}
-        activeShape={activeShape}
         onColorChange={setActiveColor}
-        onCategoryChange={setActiveCategory}
-        onShapeChange={setActiveShape}
       />
 
       {filtered.length > 0 ? (
         <>
-          <div key={`${activeColor}-${activeCategory}-${activeShape}-${showAll}`} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div key={`${activeColor}-${showAll}`} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {visible.map(design => (
               <DesignCard key={design.id} design={design} onClick={selectDesign} />
             ))}
@@ -80,7 +72,7 @@ export default function Gallery() {
       ) : (
         <div className="text-center py-16">
           <span className="material-symbols-outlined text-5xl text-slate-300 mb-4 block">search_off</span>
-          <p className="text-slate-400 font-semibold">No hay diseños con esos filtros</p>
+          <p className="text-slate-400 font-semibold">No hay diseños con ese filtro</p>
         </div>
       )}
 

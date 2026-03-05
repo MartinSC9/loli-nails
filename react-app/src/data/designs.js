@@ -1,45 +1,134 @@
+// Pink
+import pink2 from '../assets/pink/2.jpeg'
+import pink3 from '../assets/pink/3.jpeg'
+import pink6 from '../assets/pink/6.jpeg'
+import pink7 from '../assets/pink/7.jpeg'
+import pink11 from '../assets/pink/11.jpeg'
+import pink15 from '../assets/pink/15.jpeg'
+import pink16 from '../assets/pink/16.jpeg'
+import pink17 from '../assets/pink/17.jpeg'
+import pink18 from '../assets/pink/18.jpeg'
+import pink19 from '../assets/pink/19.jpeg'
+import pink20 from '../assets/pink/20.jpeg'
+import pink21 from '../assets/pink/21.jpeg'
+import pink23 from '../assets/pink/23.jpeg'
+import pink24 from '../assets/pink/24.jpeg'
+import pink28 from '../assets/pink/28.jpeg'
+import pink30 from '../assets/pink/30.jpeg'
+import pink32 from '../assets/pink/32.jpeg'
+import pink33 from '../assets/pink/33.jpeg'
+import pink34 from '../assets/pink/34.jpeg'
+import pink35 from '../assets/pink/35.jpeg'
+import pink36 from '../assets/pink/36.jpeg'
+// Red
+import red1 from '../assets/red/1.jpeg'
+import red5 from '../assets/red/5.jpeg'
+import red8 from '../assets/red/8.jpeg'
+import red9 from '../assets/red/9.jpeg'
+import red10 from '../assets/red/10.jpeg'
+import red31 from '../assets/red/31.jpeg'
+import red36 from '../assets/red/36.jpeg'
+// White
+import white4 from '../assets/white/4.jpeg'
+import white12 from '../assets/white/12.jpeg'
+import white14 from '../assets/white/14.jpeg'
+import white15 from '../assets/white/15.jpeg'
+import white21 from '../assets/white/21.jpeg'
+import white22 from '../assets/white/22.jpeg'
+import white23 from '../assets/white/23.jpeg'
+import white29 from '../assets/white/29.jpeg'
+// Black
+import black25 from '../assets/black/25.jpeg'
+import black26 from '../assets/black/26.jpeg'
+import black37 from '../assets/black/37.jpeg'
+// Subtle
+import subtle15 from '../assets/subtle/15.jpeg'
+import subtle21 from '../assets/subtle/21.jpeg'
+import subtle22 from '../assets/subtle/22.jpeg'
+// Creative
+import creative6 from '../assets/creative/6.jpeg'
+import creative26 from '../assets/creative/26.jpeg'
+import creative36 from '../assets/creative/36.jpeg'
+// Blue
+import blue27 from '../assets/blue/27.jpeg'
+// Orange
+import orange8 from '../assets/orange/8.jpeg'
+import orange9 from '../assets/orange/9.jpeg'
+// Violet
+import violet4 from '../assets/violet/4.jpeg'
+// Yellow
+import yellow13 from '../assets/yellow/13.jpeg'
+
 const designs = [
-  // Nudes (5)
-  { id: 'golden-nude', name: 'Golden Nude', category: 'nudes', shape: 'almendra', color: 'nude', subtitle: 'Minimalista & Elegante', price: '$12.000', duration: '1h 30min', description: 'Tonos dorados sobre base nude con acabado brillante. Ideal para eventos elegantes o el día a día con un toque sofisticado.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'soft-blush', name: 'Soft Blush', category: 'nudes', shape: 'almendra', color: 'nude', subtitle: 'Suave & Natural', price: '$10.000', duration: '1h 15min', description: 'Rosa pálido con efecto natural y acabado semi-mate. Perfecto para quienes buscan un look delicado y femenino.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'cream-coffin', name: 'Cream Coffin', category: 'nudes', shape: 'coffin', color: 'nude', subtitle: 'Elegancia Moderna', price: '$14.000', duration: '2h', description: 'Base crema con forma coffin, acabado glossy. Un diseño moderno que combina con todo y alarga visualmente los dedos.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'nude-cuadrada', name: 'Classic Nude', category: 'nudes', shape: 'cuadrada', color: 'nude', subtitle: 'Clásico Atemporal', price: '$9.000', duration: '1h', description: 'El nude clásico de siempre con forma cuadrada prolija. Simple, limpio y perfecto para cualquier ocasión.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'nude-stiletto', name: 'Nude Stiletto', category: 'nudes', shape: 'stiletto', color: 'nude', subtitle: 'Glamour Sutil', price: '$15.000', duration: '2h', description: 'Forma stiletto con tono nude elegante. Uñas largas y afiladas que aportan glamour sin perder la sutileza.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
+  // Pink (21)
+  { id: 'pink-glitter-blush', name: 'Glitter Blush', color: 'pink', subtitle: 'Rosa con Glitter', price: '$12.000', duration: '1h 30min', description: 'Base rosa pálido con uña accent de glitter rojo. Un toque de brillo para un look romántico y femenino.', image: pink2 },
+  { id: 'pink-shimmer', name: 'Pink Shimmer', color: 'pink', subtitle: 'Brillo Natural', price: '$10.000', duration: '1h 15min', description: 'Rosa shimmer con efecto tornasol sutil. Almendra corta perfecta para el día a día con un toque especial.', image: pink3 },
+  { id: 'pink-tropical', name: 'Tropical Bloom', color: 'pink', subtitle: 'Floral & Veraniego', price: '$16.000', duration: '2h', description: 'Diseño floral con french amarilla y rosa. Arte a mano alzada con perlas y detalles dorados. Ideal para verano.', image: pink6 },
+  { id: 'pink-stars', name: 'Pink Stars', color: 'pink', subtitle: 'Estrellas & Perlas', price: '$14.000', duration: '1h 45min', description: 'Rosa fucsia con detalles de estrellas doradas y perlas. Nail art delicado con acabado brillante.', image: pink7 },
+  { id: 'pink-glitter-short', name: 'Pink & Glitter', color: 'pink', subtitle: 'Cortas & Divertidas', price: '$10.000', duration: '1h', description: 'Fucsia sólido combinado con glitter rosado en uñas cortas. Perfecto para un look divertido y juvenil.', image: pink11 },
+  { id: 'pink-french-classic', name: 'French Clásica', color: 'pink', subtitle: 'Elegancia Francesa', price: '$11.000', duration: '1h 30min', description: 'French clásica con punta blanca y base natural. Piedras de strass como detalle. Un clásico que nunca falla.', image: pink15 },
+  { id: 'pink-baby-gems', name: 'Baby Pink Gems', color: 'pink', subtitle: 'Delicada & Brillante', price: '$12.000', duration: '1h 30min', description: 'Rosa bebé natural con pequeñas gemas y detalles dorados. Minimalismo elegante para las más delicadas.', image: pink16 },
+  { id: 'pink-leopard', name: 'Leopard Print', color: 'pink', subtitle: 'Animal Print', price: '$13.000', duration: '1h 45min', description: 'Base nude con estampado animal en las puntas. Un diseño original y trendy para las más atrevidas.', image: pink17 },
+  { id: 'pink-tortoise', name: 'Tortoise Tips', color: 'pink', subtitle: 'Carey Chic', price: '$14.000', duration: '1h 45min', description: 'French de carey (tortoise shell) sobre base natural. Diseño elegante y sofisticado con onda retro.', image: pink18 },
+  { id: 'pink-hot-glitter', name: 'Hot Pink Glitter', color: 'pink', subtitle: 'Fucsia & Brillos', price: '$13.000', duration: '1h 30min', description: 'Fucsia vibrante con uña accent de glitter rosado. Almendra media con acabado ultra brillante.', image: pink19 },
+  { id: 'pink-neon-french', name: 'Neon French', color: 'pink', subtitle: 'French Moderna', price: '$14.000', duration: '1h 45min', description: 'French rosa neón con uña accent de glitter. Versión moderna y divertida del clásico francés.', image: pink20 },
+  { id: 'pink-21', name: 'Soft Rose', color: 'pink', subtitle: 'Rosa Suave', price: '$10.000', duration: '1h 15min', description: 'Rosa suave y natural con acabado glossy. Perfecto para un look femenino y discreto.', image: pink21 },
+  { id: 'pink-23', name: 'Blush Almendra', color: 'pink', subtitle: 'Natural & Elegante', price: '$11.000', duration: '1h 15min', description: 'Tono blush en forma almendra con acabado impecable. Elegancia natural que combina con todo.', image: pink23 },
+  { id: 'pink-24', name: 'Rosa Candy', color: 'pink', subtitle: 'Dulce & Fun', price: '$12.000', duration: '1h 30min', description: 'Rosa candy vibrante con acabado brillante. Un color dulce y divertido que levanta el ánimo.', image: pink24 },
+  { id: 'pink-28', name: 'Pink Dream', color: 'pink', subtitle: 'Soñado', price: '$11.000', duration: '1h 15min', description: 'Rosa soñado con tonos suaves y acabado perfecto. Ideal para las que aman lo delicado.', image: pink28 },
+  { id: 'pink-30', name: 'Rose Gold', color: 'pink', subtitle: 'Dorado Rosado', price: '$14.000', duration: '1h 45min', description: 'Tonos rose gold con efecto metalizado sutil. Sofisticación y tendencia en un solo diseño.', image: pink30 },
+  { id: 'pink-32', name: 'Barbie Pink', color: 'pink', subtitle: 'Fucsia Total', price: '$12.000', duration: '1h 30min', description: 'Fucsia intenso estilo Barbie. Color pleno con acabado glossy para las que aman el rosa fuerte.', image: pink32 },
+  { id: 'pink-33', name: 'Cherry Blossom', color: 'pink', subtitle: 'Flor de Cerezo', price: '$15.000', duration: '2h', description: 'Diseño inspirado en flores de cerezo con tonos rosados. Arte delicado y femenino.', image: pink33 },
+  { id: 'pink-34', name: 'Pink Marble', color: 'pink', subtitle: 'Marmolado Rosa', price: '$14.000', duration: '1h 45min', description: 'Efecto marmolado en tonos rosados con detalles sutiles. Textura única y moderna.', image: pink34 },
+  { id: 'pink-35', name: 'Raspberry', color: 'pink', subtitle: 'Frambuesa', price: '$11.000', duration: '1h 15min', description: 'Tono frambuesa con acabado brillante. Un rosa intenso y elegante para destacar.', image: pink35 },
+  { id: 'pink-36', name: 'Cotton Candy', color: 'pink', subtitle: 'Algodón de Azúcar', price: '$10.000', duration: '1h', description: 'Rosa algodón de azúcar suave y dulce. Perfecto para un look tierno y juvenil.', image: pink36 },
 
-  // Rojos (5)
-  { id: 'cherry-bomb', name: 'Cherry Bomb', category: 'rojos', shape: 'coffin', color: 'red', subtitle: 'Intenso & Audaz', price: '$14.000', duration: '2h', description: 'Rojo cereza intenso con forma coffin. Un diseño audaz y llamativo que no pasa desapercibido.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'red-velvet', name: 'Red Velvet', category: 'rojos', shape: 'coffin', color: 'red', subtitle: 'Terciopelo Rojo', price: '$16.000', duration: '2h 15min', description: 'Efecto terciopelo en rojo oscuro con acabado mate aterciopelado. Textura única que se siente tan bien como se ve.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'rojo-almendra', name: 'Rojo Clásico', category: 'rojos', shape: 'almendra', color: 'red', subtitle: 'Pasión Eterna', price: '$12.000', duration: '1h 30min', description: 'Rojo clásico en forma almendra, el favorito de siempre. Elegante, versátil y perfecto para cualquier look.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'scarlet-stiletto', name: 'Scarlet Stiletto', category: 'rojos', shape: 'stiletto', color: 'red', subtitle: 'Diva & Feroz', price: '$16.000', duration: '2h 15min', description: 'Rojo escarlata con punta stiletto afilada. Para las que quieren marcar presencia con actitud y estilo.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'rojo-cuadrada', name: 'Ruby Square', category: 'rojos', shape: 'cuadrada', color: 'red', subtitle: 'Sofisticado', price: '$10.000', duration: '1h 15min', description: 'Rojo rubí con forma cuadrada limpia. Un look sofisticado y profesional con personalidad.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
+  // Red (7)
+  { id: 'red-valentine', name: 'San Valentín', color: 'red', subtitle: 'Amor & Corazones', price: '$13.000', duration: '1h 45min', description: 'Rojo pasión con corazón accent sobre base nude. Diseño romántico perfecto para una fecha especial.', image: red1 },
+  { id: 'red-cherry', name: 'Cherry French', color: 'red', subtitle: 'Cerezas & French', price: '$15.000', duration: '2h', description: 'French roja con arte de cerezas a mano alzada. Diseño frutal, divertido y súper original.', image: red5 },
+  { id: 'red-classic', name: 'Rojo Clásico', color: 'red', subtitle: 'Pasión Eterna', price: '$10.000', duration: '1h 15min', description: 'Rojo clásico puro con acabado ultra glossy. El color que nunca falla para cualquier ocasión.', image: red8 },
+  { id: 'red-fire', name: 'Red Fire', color: 'red', subtitle: 'Fuego & Intensidad', price: '$11.000', duration: '1h 15min', description: 'Rojo fuego intenso con brillo espejo. Uñas que irradian pasión y confianza.', image: red9 },
+  { id: 'red-glam', name: 'Red Glam', color: 'red', subtitle: 'Glamour Rojo', price: '$12.000', duration: '1h 30min', description: 'Rojo glamoroso con acabado perfecto. Elegancia y actitud en cada uña.', image: red10 },
+  { id: 'red-wine', name: 'Red Wine', color: 'red', subtitle: 'Borgoña', price: '$12.000', duration: '1h 30min', description: 'Tono borgoña profundo como un buen vino. Sofisticado y perfecto para otoño-invierno.', image: red31 },
+  { id: 'red-berry', name: 'Berry Red', color: 'red', subtitle: 'Frutos Rojos', price: '$11.000', duration: '1h 15min', description: 'Rojo berry vibrante con matices profundos. Un color rico y versátil para cualquier estilo.', image: red36 },
 
-  // French (5)
-  { id: 'french-classic', name: 'French Classic', category: 'french', shape: 'cuadrada', color: 'white', subtitle: 'Elegancia Francesa', price: '$11.000', duration: '1h 30min', description: 'La french clásica con punta blanca definida sobre base natural. Nunca pasa de moda, siempre impecable.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'french-almendra', name: 'French Almendra', category: 'french', shape: 'almendra', color: 'white', subtitle: 'Delicada & Fina', price: '$13.000', duration: '1h 45min', description: 'French en forma almendra con líneas suaves y prolijas. Delicadeza y feminidad en cada detalle.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'french-twist', name: 'French Twist', category: 'french', shape: 'almendra', color: 'white', subtitle: 'Moderno & Fresh', price: '$14.000', duration: '1h 45min', description: 'Versión moderna de la french con líneas diagonales y colores pastel. Un twist fresco al clásico.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'french-coffin', name: 'French Coffin', category: 'french', shape: 'coffin', color: 'white', subtitle: 'Bold & Chic', price: '$15.000', duration: '2h', description: 'French con forma coffin para un look más bold y moderno. Combina lo clásico con lo trendy.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'french-stiletto', name: 'French Stiletto', category: 'french', shape: 'stiletto', color: 'white', subtitle: 'Drama & Clase', price: '$16.000', duration: '2h 15min', description: 'French en punta stiletto, máximo drama con clase. Para las que aman los diseños largos y llamativos.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
+  // White (8)
+  { id: 'white-golden-border', name: 'Golden Border', color: 'white', subtitle: 'Borde Dorado', price: '$16.000', duration: '2h', description: 'Base glazed con borde dorado cromado en almendra. Efecto espejo lujoso y súper elegante.', image: white4 },
+  { id: 'white-french-strass', name: 'French & Strass', color: 'white', subtitle: 'Clásica con Brillo', price: '$13.000', duration: '1h 45min', description: 'French clásica cuadrada con hilera de strass. El clásico francés elevado con cristales brillantes.', image: white12 },
+  { id: 'white-pure', name: 'Pure White', color: 'white', subtitle: 'Blanco Puro', price: '$10.000', duration: '1h 15min', description: 'Blanco puro con acabado impecable. Limpio, fresco y perfecto para cualquier temporada.', image: white14 },
+  { id: 'white-pearl', name: 'Pearl White', color: 'white', subtitle: 'Perla', price: '$12.000', duration: '1h 30min', description: 'Blanco perlado con reflejos iridiscentes. Brillo sutil que cambia con la luz.', image: white15 },
+  { id: 'white-elegant', name: 'White Elegant', color: 'white', subtitle: 'Elegancia Total', price: '$11.000', duration: '1h 15min', description: 'Blanco elegante con acabado satinado. Sofisticación pura para eventos especiales.', image: white21 },
+  { id: 'white-snow', name: 'Snow White', color: 'white', subtitle: 'Nieve', price: '$10.000', duration: '1h', description: 'Blanco nieve brillante en forma cuadrada. Simple, limpio y siempre impactante.', image: white22 },
+  { id: 'white-milky', name: 'Milky White', color: 'white', subtitle: 'Blanco Lechoso', price: '$11.000', duration: '1h 15min', description: 'Tono blanco lechoso semi-transparente. Efecto natural y delicado que alarga los dedos.', image: white23 },
+  { id: 'white-bridal', name: 'Bridal', color: 'white', subtitle: 'Novia', price: '$14.000', duration: '1h 45min', description: 'Diseño ideal para novias con blanco impecable y detalles sutiles. Tu día especial merece uñas perfectas.', image: white29 },
 
-  // Glazed (5)
-  { id: 'glazed-donut', name: 'Glazed Donut', category: 'glazed', shape: 'cuadrada', color: 'nude', subtitle: 'Efecto Espejo', price: '$14.000', duration: '1h 45min', description: 'El famoso efecto glazed donut con brillo espejado tornasolado. Tendencia viral que queda increíble en persona.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'pearl-glaze', name: 'Pearl Glaze', category: 'glazed', shape: 'cuadrada', color: 'white', subtitle: 'Brillo Perla', price: '$13.000', duration: '1h 30min', description: 'Acabado perlado con reflejos iridiscentes. Elegancia luminosa que cambia de tono con la luz.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'chrome-stiletto', name: 'Chrome Stiletto', category: 'glazed', shape: 'stiletto', color: 'nude', subtitle: 'Futurista', price: '$18.000', duration: '2h 30min', description: 'Efecto chrome metálico en stiletto largo. Un diseño futurista y ultra llamativo para las más atrevidas.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'glazed-coffin', name: 'Glazed Coffin', category: 'glazed', shape: 'coffin', color: 'nude', subtitle: 'Tendencia 2025', price: '$15.000', duration: '2h', description: 'Glazed en forma coffin, la combinación más pedida del momento. Brillo sutil con forma estilizada.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'mirror-almendra', name: 'Mirror Almendra', category: 'glazed', shape: 'almendra', color: 'nude', subtitle: 'Reflejo Perfecto', price: '$14.000', duration: '1h 45min', description: 'Efecto espejo en almendra con reflejos perfectos. Minimalismo con un brillo que hipnotiza.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
+  // Black (3)
+  { id: 'black-galaxy', name: 'Galaxy Black', color: 'black', subtitle: 'Galaxia & Estrellas', price: '$15.000', duration: '2h', description: 'Negro con efecto galaxia y destellos de estrellas plateadas. Misterioso y magnético como el cielo nocturno.', image: black25 },
+  { id: 'black-dark', name: 'Dark Moon', color: 'black', subtitle: 'Oscuro & Elegante', price: '$13.000', duration: '1h 30min', description: 'Negro profundo con acabado brillante. Elegancia oscura para las que aman el estilo dark.', image: black26 },
+  { id: 'black-shimmer', name: 'Black Shimmer', color: 'black', subtitle: 'Negro Brillante', price: '$14.000', duration: '1h 45min', description: 'Negro con micro shimmer que brilla con la luz. Misterio y sofisticación en cada movimiento.', image: black37 },
 
-  // Neon (5)
-  { id: 'neon-lime', name: 'Neon Lime', category: 'neon', shape: 'coffin', color: 'green', subtitle: 'Vibrante & Fun', price: '$13.000', duration: '1h 45min', description: 'Verde lima neón súper vibrante en coffin. Para las que quieren color, diversión y mucha onda.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'electric-green', name: 'Electric Green', category: 'neon', shape: 'coffin', color: 'green', subtitle: 'Energía Pura', price: '$14.000', duration: '2h', description: 'Verde eléctrico con acabado ultra brillante. Energía pura en tus manos, ideal para festivales y salidas.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'neon-almendra', name: 'Neon Almendra', category: 'neon', shape: 'almendra', color: 'green', subtitle: 'Tropical Chic', price: '$12.000', duration: '1h 30min', description: 'Neón tropical en forma almendra. Un look veraniego y chic que levanta cualquier outfit.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'neon-cuadrada', name: 'Neon Square', category: 'neon', shape: 'cuadrada', color: 'green', subtitle: 'Pop & Retro', price: '$10.000', duration: '1h 15min', description: 'Neón en cuadrada corta con onda pop retro. Colores que brillan bajo cualquier luz.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'neon-stiletto', name: 'Neon Stiletto', category: 'neon', shape: 'stiletto', color: 'green', subtitle: 'Festival Ready', price: '$15.000', duration: '2h', description: 'Stiletto neón para brillar en festivales y fiestas. Largo, afilado y con color que no para.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
+  // Subtle (3)
+  { id: 'subtle-nude', name: 'Nude Natural', color: 'subtle', subtitle: 'Minimalista', price: '$9.000', duration: '1h', description: 'Nude natural con acabado glossy impecable. El look más limpio y elegante para el día a día.', image: subtle15 },
+  { id: 'subtle-glazed', name: 'Glazed Nude', color: 'subtle', subtitle: 'Efecto Glazed', price: '$12.000', duration: '1h 30min', description: 'Nude con efecto glazed tornasolado. La tendencia viral que queda increíble en persona.', image: subtle21 },
+  { id: 'subtle-soft', name: 'Soft Nude', color: 'subtle', subtitle: 'Suave & Delicado', price: '$9.000', duration: '1h', description: 'Tono nude suave y natural. Perfecto para quienes prefieren lo sutil y minimalista.', image: subtle22 },
 
-  // Dark (5)
-  { id: 'midnight-black', name: 'Midnight Black', category: 'dark', shape: 'cuadrada', color: 'black', subtitle: 'Misterio Nocturno', price: '$11.000', duration: '1h 15min', description: 'Negro puro con acabado ultra glossy. Misterio y elegancia nocturna en un diseño simple pero impactante.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'dark-gothic', name: 'Dark Gothic', category: 'dark', shape: 'cuadrada', color: 'black', subtitle: 'Elegancia Oscura', price: '$13.000', duration: '1h 30min', description: 'Estilo gótico con detalles mate y brillante combinados. Para las amantes de la estética dark y alternativa.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-  { id: 'dark-stiletto', name: 'Dark Stiletto', category: 'dark', shape: 'stiletto', color: 'black', subtitle: 'Poder & Actitud', price: '$16.000', duration: '2h 15min', description: 'Stiletto negro con acabado espejo. Poder, actitud y un look que impone desde el primer momento.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl2FsTHNYtBKL_HqwKU52b6-UcE_V6iZ2isUuwmF_oNYGfAVx-41SjRz-fd4hQDKOoSAFYT17W1kBkB5X1qJhAUOwLxHLkv3NDwdUdA01cJ_PlnuX2dewRnAqbb_knr2VQGyl1JKsFFuhx5ZnqPEOJLtxVMKuJJaOiMRP9xCBq6zD81yiDhCzZX42_ovnmeE2_3RK1Gt31gN4OwTwG5mzpW3lvQWb3M1g77c-GnWnOXol1GVAH9NIt4OESka4uVMYV4oc6fimG' },
-  { id: 'onyx-almendra', name: 'Onyx Almendra', category: 'dark', shape: 'almendra', color: 'black', subtitle: 'Minimalismo Dark', price: '$12.000', duration: '1h 30min', description: 'Negro ónix en almendra con líneas limpias. Minimalismo oscuro para las que prefieren lo sutil pero con carácter.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDjbBVEaO2Rp6P5qfQjgaXwk_OQzIAZbWWOrXSnX9digzO88I9EiHulMggx5RECLhRh6ZCuPGX3Yq6S35o3cweHacbU8xjyba9BCiFkhgQMpp9U65AGkrx1jxzeZdLFmBT89cfdc68_WxwuQDeg2VnCk94flcPburK4jcxZhayy30RoYxX2mgo7N8KsS9iien0Zu6co70VTwmT6gxPRxnjqJuB9j7HZAj6ss-KkS7Mnpi6FT7k7XAaVoqGKOIRIWeDQ4HP3L40f' },
-  { id: 'dark-coffin', name: 'Dark Coffin', category: 'dark', shape: 'coffin', color: 'black', subtitle: 'Vanguardia', price: '$15.000', duration: '2h', description: 'Coffin negro de vanguardia con acabado perfecto. Forma moderna y color intenso para un statement total.', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAqKOoSXKRbcwQUs_F5c6e4OLUuj3mNcrK4drxng5pwjFPYlnVfq3GI_8s-VoK1Uf2LtOTu0iHQG2gRhR40FOB0f18T6MopMGkIgJzF4cTKrn97_4ciL9SHKuBpTPHiJtuHRFuXIKGfLp5b8jOvYJ3ws5p_9zfw8xMVoQkWdqCta1j7S4WI699uFb6pDYlQH-XOBgMSFEphA-gpHy6gEHQHtISPZzRptVjQfD5g1goLc3mbq-rM5gVaQDOV_Dm_5HP1MvN7RSrT' },
-];
+  // Creative (3)
+  { id: 'creative-floral', name: 'Floral Art', color: 'creative', subtitle: 'Arte Floral', price: '$18.000', duration: '2h 30min', description: 'Diseño floral artístico con colores vibrantes y detalles a mano alzada. Cada uña es una obra de arte única.', image: creative6 },
+  { id: 'creative-abstract', name: 'Abstract Art', color: 'creative', subtitle: 'Arte Abstracto', price: '$17.000', duration: '2h 15min', description: 'Diseño abstracto con formas y colores creativos. Para las que buscan algo único y diferente.', image: creative26 },
+  { id: 'creative-mixed', name: 'Mixed Media', color: 'creative', subtitle: 'Técnica Mixta', price: '$18.000', duration: '2h 30min', description: 'Combinación de técnicas: glitter, chrome y nail art. Un diseño maximalista para las más creativas.', image: creative36 },
 
-export default designs;
+  // Blue (1)
+  { id: 'blue-electric', name: 'Electric Blue', color: 'blue', subtitle: 'Azul Eléctrico', price: '$14.000', duration: '1h 45min', description: 'Azul eléctrico intenso con efecto chrome en uña accent. Un color vibrante y llamativo que impacta.', image: blue27 },
+
+  // Orange (2)
+  { id: 'orange-chrome', name: 'Orange Chrome', color: 'orange', subtitle: 'Naranja & Dorado', price: '$15.000', duration: '2h', description: 'Naranja con detalles chrome dorados en 3D. Diseño artístico con volumen y brillo metalizado.', image: orange8 },
+  { id: 'orange-sunset', name: 'Sunset', color: 'orange', subtitle: 'Atardecer', price: '$14.000', duration: '1h 45min', description: 'Tonos naranja cálidos como un atardecer. Calidez y estilo en cada detalle.', image: orange9 },
+
+  // Violet (1)
+  { id: 'violet-aurora', name: 'Aurora Violet', color: 'violet', subtitle: 'Aurora Boreal', price: '$15.000', duration: '2h', description: 'Violeta iridiscente con efecto aurora boreal. Colores que cambian con la luz para un look mágico.', image: violet4 },
+
+  // Yellow (1)
+  { id: 'yellow-tropical', name: 'Tropical Yellow', color: 'yellow', subtitle: 'Tropical & Floral', price: '$16.000', duration: '2h', description: 'Amarillo tropical con flores rosas a mano alzada y perlas doradas. Diseño veraniego lleno de vida.', image: yellow13 },
+]
+
+export default designs
