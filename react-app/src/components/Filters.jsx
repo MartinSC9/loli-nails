@@ -21,11 +21,15 @@ export default function Filters({ activeColor, onColorChange, backLink }) {
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-    const timer = setTimeout(() => {
+    let cancelled = false
+    const bounce = (delay) => setTimeout(() => {
+      if (cancelled) return
       el.scrollTo({ left: 80, behavior: 'smooth' })
-      setTimeout(() => el.scrollTo({ left: 0, behavior: 'smooth' }), 500)
-    }, 600)
-    return () => clearTimeout(timer)
+      setTimeout(() => { if (!cancelled) el.scrollTo({ left: 0, behavior: 'smooth' }) }, 500)
+    }, delay)
+    const t1 = bounce(800)
+    const t2 = bounce(2200)
+    return () => { cancelled = true; clearTimeout(t1); clearTimeout(t2) }
   }, [])
 
   useEffect(() => {
