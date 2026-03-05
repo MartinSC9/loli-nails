@@ -10,6 +10,15 @@ export default function GalleryGrid() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
+    const hash = decodeURIComponent(window.location.hash)
+    if (hash.startsWith('#diseño/')) {
+      const id = hash.replace('#diseño/', '')
+      const found = designs.find(d => d.id === id)
+      if (found) setSelectedDesign(found)
+    }
+  }, [])
+
+  useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 80)
     window.addEventListener('scroll', handler, { passive: true })
     return () => window.removeEventListener('scroll', handler)
@@ -20,10 +29,12 @@ export default function GalleryGrid() {
   )
 
   const selectDesign = (design) => {
+    window.history.replaceState(null, '', `/galeria#diseño/${design.id}`)
     setSelectedDesign(design)
   }
 
   const closeModal = () => {
+    window.history.replaceState(null, '', '/galeria')
     setSelectedDesign(null)
   }
 
