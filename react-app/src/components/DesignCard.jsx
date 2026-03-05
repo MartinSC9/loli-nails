@@ -9,16 +9,16 @@ export default function DesignCard({ design, onClick }) {
             alt={design.name}
           />
         </div>
-        <div className="p-5">
-          <div className="flex items-center justify-between">
-            <h3 className="font-bold text-lg text-slate-900">{design.name}</h3>
-            <span className="text-primary font-bold">{design.price}</span>
+        <div className="p-4">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="font-extrabold text-sm uppercase tracking-wide text-slate-900">{design.name}</h3>
+            {design.shape && (
+              <span className="shrink-0 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                {design.shape}
+              </span>
+            )}
           </div>
-          <p className="text-sm text-slate-500 mt-1">{design.subtitle}</p>
-          <button className="mt-4 w-full flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold py-2.5 rounded-full hover:bg-primary/90 transition-colors">
-            <span className="material-symbols-outlined text-base">favorite</span>
-            Quiero este!
-          </button>
+          <p className="text-xs text-slate-400 mt-1">{design.subtitle}</p>
         </div>
       </div>
     </div>

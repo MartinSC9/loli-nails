@@ -11,7 +11,7 @@ export default function Header({ onMenuToggle }) {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 w-full glass-card border-b border-primary/10 ${scrolled ? 'shadow-lg' : ''}`}>
+    <header className={`sticky top-0 z-50 w-full bg-white border-b border-primary/10 ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
         <div className="flex items-center gap-12">
           <a href="#" className="flex items-center">

@@ -34,13 +34,15 @@ export default function DesignModal({ design, onClose }) {
         <div className="aspect-[4/3] overflow-hidden bg-slate-100">
           <img className="w-full h-full object-cover block" src={design.image} alt={design.name} />
         </div>
-        <div className="p-8">
-          <h3 className="text-2xl font-black text-slate-900 mb-1">{design.name}</h3>
-          <p className="text-sm text-slate-500 mb-2">{design.subtitle}</p>
-          <p className="text-primary font-bold text-xl mb-3">{design.price}</p>
-          <p className="text-slate-600 mb-4">{design.description}</p>
-          <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-6">
-            <span className="material-symbols-outlined text-base">schedule</span>
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-1">
+            <h3 className="font-extrabold text-base uppercase tracking-wide text-slate-900">{design.name}</h3>
+            <span className="text-primary font-bold text-sm">{design.price}</span>
+          </div>
+          <p className="text-xs text-slate-400 mb-3">{design.subtitle}</p>
+          <p className="text-sm text-slate-500 mb-3 leading-relaxed">{design.description}</p>
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-5">
+            <span className="material-symbols-outlined text-sm">schedule</span>
             {design.duration}
           </div>
           <a
