@@ -1,6 +1,6 @@
 export default function DesignCard({ design, onClick }) {
   return (
-    <div className="animate-card group cursor-pointer" onClick={() => onClick(design)}>
+    <div className="animate-card group cursor-pointer" onClick={onClick ? () => onClick(design) : undefined}>
       <div className="glass-card rounded-2xl overflow-hidden hover-zoom">
         <div className="aspect-[3/4] overflow-hidden bg-slate-100">
           <img

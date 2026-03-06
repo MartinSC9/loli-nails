@@ -21,7 +21,7 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-6 text-slate-900">Links Rápidos</h3>
           <ul className="flex flex-col gap-3 text-slate-500">
-            <li><Link className="hover:text-primary transition-colors" to="/#galeria">Catálogo Digital</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/galeria">Catálogo Digital</Link></li>
             <li><Link className="hover:text-primary transition-colors" to="/#servicios">Servicios & Precios</Link></li>
             <li><Link className="hover:text-primary transition-colors" to="/#info-importante">Info Importante</Link></li>
             <li><Link className="hover:text-primary transition-colors" to="/#sobre-mi">Sobre Mí</Link></li>

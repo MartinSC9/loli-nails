@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function MobileMenu({ open, onClose }) {
   return (
     <>
@@ -6,7 +8,7 @@ export default function MobileMenu({ open, onClose }) {
         <button onClick={onClose} className="self-end">
           <span className="material-symbols-outlined text-2xl">close</span>
         </button>
-        <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
+        <Link onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" to="/galeria">Galería</Link>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#info-importante">Info</a>
         <a onClick={onClose} className="text-lg font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>

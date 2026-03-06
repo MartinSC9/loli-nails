@@ -1,7 +1,7 @@
 const reviews = [
   { initials: 'MS', name: 'Martina Suárez', since: 'Cliente desde 2022', text: '"Loli es una artista. Mis uñas nunca se vieron tan naturales y elegantes. El detalle en el Nail Art es impecable."' },
   { initials: 'VC', name: 'Valentina Costa', since: 'Cliente frecuente', text: '"La técnica de Kapping cambió mi vida, mis uñas ya no se quiebran. El ambiente del estudio es súper relax."' },
-  { initials: 'LR', name: 'Lucía Ramírez', since: 'Cliente desde 2023', text: '"Siempre me sorprende con diseños nuevos. Es la única persona a la que le confío mis uñas hace 3 años."' },
+  { initials: 'LR', name: 'Lucía Ramírez', since: 'Cliente desde 2023', text: '"Siempre me sorprende con diseños nuevos. Es la única persona a la que le confío mis uñas hace 5 años."' },
 ]
 
 export default function Reviews() {

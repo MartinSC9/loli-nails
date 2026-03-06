@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 export default function Header({ onMenuToggle }) {
@@ -20,7 +21,7 @@ export default function Header({ onMenuToggle }) {
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-8">
-            <a className="text-sm font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
+            <Link className="text-sm font-semibold hover:text-primary transition-colors" to="/galeria">Galería</Link>
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#info-importante">Info</a>
             <a className="text-sm font-semibold hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>

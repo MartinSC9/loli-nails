@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import heroVideo1 from '../assets/video/1.mp4'
 import heroVideo2 from '../assets/video/2.mp4'
 
@@ -17,10 +18,10 @@ export default function Hero() {
             Catálogo premium de nail art para la estética moderna. Filtrá por tu estilo favorito y reservá tu turno.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#galeria" className="px-8 py-3.5 rounded-full bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+            <Link to="/galeria" className="px-8 py-3.5 rounded-full bg-primary text-white font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
               <span className="material-symbols-outlined">palette</span>
               Ver Diseños
-            </a>
+            </Link>
             <a href="#servicios" className="px-8 py-3.5 rounded-full border-2 border-primary/20 font-bold hover:bg-primary/5 transition-all flex items-center gap-2">
               <span className="material-symbols-outlined text-primary">spa</span>
               Servicios

@@ -15,7 +15,7 @@ export default function About() {
               <span className="material-symbols-outlined">verified</span>
             </div>
             <div>
-              <p className="font-extrabold text-slate-900 text-lg">+3 Años</p>
+              <p className="font-extrabold text-slate-900 text-lg">+5 Años</p>
               <p className="text-xs text-slate-500">Experiencia Certificada</p>
             </div>
           </div>

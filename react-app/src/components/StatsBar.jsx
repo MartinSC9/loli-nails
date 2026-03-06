@@ -7,7 +7,7 @@ export default function StatsBar() {
           <p className="text-sm text-slate-500 font-medium mt-1">Diseños Realizados</p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-black text-primary">+3</p>
+          <p className="text-3xl font-black text-primary">+5</p>
           <p className="text-sm text-slate-500 font-medium mt-1">Años de Experiencia</p>
         </div>
         <div className="text-center">
