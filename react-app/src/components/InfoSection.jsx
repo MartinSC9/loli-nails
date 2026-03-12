@@ -1,3 +1,5 @@
+import useInView from '../hooks/useInView'
+
 const considerations = [
   { icon: 'schedule', type: 'info', text: 'Cada servicio tiene una duración desde 2hs a 3hs aprox dependiendo del diseño.' },
   { icon: 'clean_hands', type: 'check', text: 'Venir al turno con las uñas limpias y sin esmalte tradicional.' },
@@ -39,17 +41,23 @@ function Item({ icon, type, text }) {
 }
 
 export default function InfoSection() {
+  const [ref, inView] = useInView()
+
   return (
-    <section id="info-importante" className="max-w-7xl mx-auto px-6 py-16">
-      <div className="text-center mb-10">
+    <section ref={ref} id="info-importante" className="max-w-7xl mx-auto px-6 py-16">
+      <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Importante</span>
         <h2 className="text-3xl md:text-5xl font-black"><span className="font-script text-primary">Info</span> que necesitás saber</h2>
       </div>
 
       {/* Servicios - Qué es cada uno */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-        {serviceInfo.map(s => (
-          <div key={s.name} className="glass-card rounded-2xl p-6 text-center">
+        {serviceInfo.map((s, i) => (
+          <div
+            key={s.name}
+            className={`glass-card rounded-2xl p-6 text-center transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: inView ? `${200 + i * 100}ms` : '0ms' }}
+          >
             <h4 className="text-lg font-black text-slate-900 mb-2">{s.name}</h4>
             <p className="text-slate-500 text-sm mb-3">{s.desc}</p>
             <div className="inline-flex items-center gap-1.5 text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full">
@@ -62,33 +70,25 @@ export default function InfoSection() {
 
       {/* Consideraciones, Turnos, Cuidados */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div className="glass-card rounded-2xl p-6">
-          <h3 className="text-lg font-black mb-4 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary fill-1">info</span>
-            Consideraciones
-          </h3>
-          <div className="flex flex-col divide-y divide-primary/10">
-            {considerations.map((r, i) => <Item key={i} {...r} />)}
+        {[
+          { title: 'Consideraciones', icon: 'info', items: considerations },
+          { title: 'Turnos', icon: 'calendar_month', items: turnos },
+          { title: 'Cuidados post service', icon: 'spa', items: tips, extraClass: 'md:col-span-2 lg:col-span-1' },
+        ].map((card, i) => (
+          <div
+            key={card.title}
+            className={`glass-card rounded-2xl p-6 ${card.extraClass || ''} transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: inView ? `${500 + i * 150}ms` : '0ms' }}
+          >
+            <h3 className="text-lg font-black mb-4 flex items-center gap-2">
+              <span className="material-symbols-outlined text-primary fill-1">{card.icon}</span>
+              {card.title}
+            </h3>
+            <div className="flex flex-col divide-y divide-primary/10">
+              {card.items.map((item, j) => <Item key={j} {...item} />)}
+            </div>
           </div>
-        </div>
-        <div className="glass-card rounded-2xl p-6">
-          <h3 className="text-lg font-black mb-4 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary fill-1">calendar_month</span>
-            Turnos
-          </h3>
-          <div className="flex flex-col divide-y divide-primary/10">
-            {turnos.map((t, i) => <Item key={i} {...t} />)}
-          </div>
-        </div>
-        <div className="glass-card rounded-2xl p-6 md:col-span-2 lg:col-span-1">
-          <h3 className="text-lg font-black mb-4 flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary fill-1">spa</span>
-            Cuidados post service
-          </h3>
-          <div className="flex flex-col divide-y divide-primary/10">
-            {tips.map((t, i) => <Item key={i} {...t} />)}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   )

@@ -1,16 +1,25 @@
 import meImg from '../assets/me.png'
+import useInView from '../hooks/useInView'
 
 const features = ['Higiene Clínica', 'Marcas Premium', 'Atención Personal', 'Diseños Exclusivos']
 
 export default function About() {
+  const [ref, inView] = useInView()
+
   return (
-    <section id="sobre-mi" className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <section ref={ref} id="sobre-mi" className="max-w-7xl mx-auto px-6 py-12 md:py-16">
       <div className="flex flex-col md:flex-row items-center gap-16">
-        <div className="w-full md:w-2/5 relative">
+        <div className={`w-full md:w-2/5 relative transition-all duration-800 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
           <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-            <img className="w-full h-full object-cover" alt="Loli - Artista de Uñas" src={meImg} />
+            <img
+              className="w-full h-full object-cover"
+              alt="Loli - Artista de Uñas"
+              src={meImg}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
-          <div className="absolute -bottom-4 -right-4 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3">
+          <div className={`absolute -bottom-4 -right-4 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-700 delay-500 ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
             <div className="bg-primary text-white p-2.5 rounded-xl">
               <span className="material-symbols-outlined">verified</span>
             </div>
@@ -20,15 +29,19 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-3/5">
+        <div className={`w-full md:w-3/5 transition-all duration-800 delay-200 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">La Artista</span>
           <h2 className="text-3xl md:text-5xl font-black mb-6"><span className="font-script text-primary">Pasión</span> por los detalles</h2>
           <p className="text-slate-600 text-lg mb-8 leading-relaxed">
             Hola, soy Loli. Mi misión es elevar tu confianza a través de la belleza de tus manos. Cada uña es un lienzo único que merece dedicación y el más alto estándar de higiene y técnica.
           </p>
           <div className="grid grid-cols-2 gap-5 mb-10">
-            {features.map(f => (
-              <div key={f} className="flex items-center gap-3 bg-primary/5 p-3 rounded-xl">
+            {features.map((f, i) => (
+              <div
+                key={f}
+                className={`flex items-center gap-3 bg-primary/5 p-3 rounded-xl transition-all duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: inView ? `${500 + i * 100}ms` : '0ms' }}
+              >
                 <span className="material-symbols-outlined text-primary fill-1">check_circle</span>
                 <span className="font-semibold text-sm">{f}</span>
               </div>

@@ -1,3 +1,5 @@
+import useInView from '../hooks/useInView'
+
 const services = [
   { icon: 'palette', name: 'Esmaltado Semipermanente', price: '$15.000', desc: 'Esmaltado en gel sobre uña natural. Productos aprobados por ANMAT.', time: '1h 10min aprox.', featured: false },
   { icon: 'shield', name: 'Kapping Gel de Construcción', price: '$19.500', desc: 'Capa de gel sobre la uña natural, brinda mayor dureza a las uñas. Recomendable en uñas largas.', time: '2hs aprox.', featured: false },
@@ -6,17 +8,23 @@ const services = [
 ]
 
 export default function Services() {
+  const [ref, inView] = useInView()
+
   return (
-    <section id="servicios" className="bg-white border-y border-primary/10">
+    <section ref={ref} id="servicios" className="bg-white border-y border-primary/10">
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-        <div className="text-center mb-6">
+        <div className={`text-center mb-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2 block">Nuestros servicios</span>
           <h2 className="text-3xl md:text-5xl font-black mb-4">Lista de <span className="font-script text-primary">Precios</span></h2>
           <p className="text-slate-500 max-w-2xl mx-auto text-lg">Todos los servicios incluyen manicuria combinada con torno (pulido de cutículas perfecto) y utilización de productos de calidad aprobados por ANMAT.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {services.map(s => s.featured ? (
-            <div key={s.name} className="service-card rounded-2xl p-7 bg-primary text-white relative overflow-hidden">
+          {services.map((s, i) => s.featured ? (
+            <div
+              key={s.name}
+              className={`service-card rounded-2xl p-7 bg-primary text-white relative overflow-hidden transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: inView ? `${300 + i * 100}ms` : '0ms' }}
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-5">
@@ -32,7 +40,11 @@ export default function Services() {
               </div>
             </div>
           ) : (
-            <div key={s.name} className="service-card glass-card rounded-2xl p-7">
+            <div
+              key={s.name}
+              className={`service-card glass-card rounded-2xl p-7 transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: inView ? `${300 + i * 100}ms` : '0ms' }}
+            >
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
                 <span className="material-symbols-outlined text-primary text-2xl fill-1">{s.icon}</span>
               </div>

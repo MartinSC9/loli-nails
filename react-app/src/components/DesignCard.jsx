@@ -7,6 +7,8 @@ export default function DesignCard({ design, onClick }) {
             className="w-full h-full object-cover transition-transform duration-500 block"
             src={design.image}
             alt={design.name}
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="p-4">

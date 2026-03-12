@@ -32,7 +32,7 @@ export default function DesignModal({ design, onClose }) {
           <span className="material-symbols-outlined">close</span>
         </button>
         <div className="aspect-[4/3] overflow-hidden bg-slate-100">
-          <img className="w-full h-full object-cover block" src={design.image} alt={design.name} />
+          <img className="w-full h-full object-cover block" src={design.image} alt={design.name} decoding="async" />
         </div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-1">

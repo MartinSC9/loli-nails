@@ -70,6 +70,8 @@ export default function GalleryGrid() {
                 src={design.image}
                 alt={design.name}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                decoding="async"
               />
               <span className="absolute top-1.5 right-1.5 md:top-2 md:right-2 bg-black/50 text-white text-[10px] md:text-xs font-bold px-1.5 py-0.5 md:px-2 md:py-1 rounded-full backdrop-blur-sm">
                 {design.price}
