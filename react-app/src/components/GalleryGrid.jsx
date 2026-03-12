@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import designs from '../data/designs'
 import Filters from './Filters'
@@ -8,6 +8,9 @@ export default function GalleryGrid() {
   const [activeColor, setActiveColor] = useState('all')
   const [selectedDesign, setSelectedDesign] = useState(null)
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [filterKey, setFilterKey] = useState(0)
+  const prevColor = useRef('all')
 
   useEffect(() => {
     const hash = decodeURIComponent(window.location.hash)
@@ -19,6 +22,10 @@ export default function GalleryGrid() {
   }, [])
 
   useEffect(() => {
+    requestAnimationFrame(() => setMounted(true))
+  }, [])
+
+  useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 80)
     window.addEventListener('scroll', handler, { passive: true })
     return () => window.removeEventListener('scroll', handler)
@@ -27,6 +34,14 @@ export default function GalleryGrid() {
   const filtered = designs.filter(d =>
     activeColor === 'all' || d.color === activeColor
   )
+
+  const handleColorChange = (color) => {
+    if (color !== prevColor.current) {
+      prevColor.current = color
+      setFilterKey(k => k + 1)
+      setActiveColor(color)
+    }
+  }
 
   const selectDesign = (design) => {
     window.history.replaceState(null, '', `/galeria#diseño/${design.id}`)
@@ -40,7 +55,7 @@ export default function GalleryGrid() {
 
   return (
     <section className="max-w-5xl mx-auto w-full px-4">
-      <div className="pt-4 pb-2 -mx-4 px-4">
+      <div className={`pt-4 pb-2 -mx-4 px-4 transition-all duration-300 ease-out ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'}`}>
         <div className="flex items-center gap-3 mb-2">
           <Link
             to="/"
@@ -54,17 +69,21 @@ export default function GalleryGrid() {
           </h1>
         </div>
       </div>
-      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md -mx-4 px-4 py-2 min-h-[52px]">
-        <Filters activeColor={activeColor} onColorChange={setActiveColor} backLink={scrolled} />
+      <div className={`sticky top-0 z-30 bg-white/80 backdrop-blur-md -mx-4 px-4 py-2 min-h-[52px] transition-all duration-300 delay-100 ease-out ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'}`}>
+        <Filters activeColor={activeColor} onColorChange={handleColorChange} backLink={scrolled} />
       </div>
 
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2">
-          {filtered.map(design => (
+        <div
+          key={filterKey}
+          className={`grid grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2 gallery-grid-enter ${mounted ? 'gallery-grid-visible' : ''}`}
+        >
+          {filtered.map((design, i) => (
             <button
               key={design.id}
               onClick={() => selectDesign(design)}
-              className="aspect-square overflow-hidden rounded-sm md:rounded-lg cursor-pointer group relative"
+              className="gallery-item aspect-square overflow-hidden rounded-sm md:rounded-lg cursor-pointer group relative"
+              style={{ animationDelay: `${Math.min(i * 30, 600)}ms` }}
             >
               <img
                 src={design.image}
